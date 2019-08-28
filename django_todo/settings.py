@@ -26,7 +26,8 @@ SECRET_KEY = '-o^$*!7b+u3xvzcu@6x6@aq5e9e-(34o_&6514m45efcn86@vo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['e33e15562f10479db8eb019b976078ea.vfs.cloud9.us-east-1.amazonaws.com','simple-django-todo1.herokuapp.com']
+ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'),
+                 os.environ.get('HOSTNAME')]
 
 
 # Application definition
