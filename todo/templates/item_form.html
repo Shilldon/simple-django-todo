@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>I need to do this...</h1>
+    <form method="POST">
+        {% csrf_token %}
+        
+        <!--
+        <label for="id_name">Name:</label>
+        <input type="text" id="id_name" name="name"/><br>
+        <label for="id_done">Done:</label>
+        <input type="checkbox" id="id_done" name="done"/><br>
+        <br>-->
+        
+        {{ form.as_p }}
+        <!--as_p will render form with paragraph spacing-->
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
